@@ -16,6 +16,9 @@ WORKDIR /app
 # Install pnpm globally
 RUN npm install -g pnpm
 
+# Dropbox fileserver support
+RUN npm install -g @modelcontextprotocol/server-filesystem-dropbox
+
 # Copy package.json and pnpm-lock.yaml first to leverage Docker cache
 COPY package.json pnpm-lock.yaml ./
 
